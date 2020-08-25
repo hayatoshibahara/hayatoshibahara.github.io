@@ -1,0 +1,1 @@
+# hayatoshibahara.github.io
