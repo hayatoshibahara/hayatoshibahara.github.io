@@ -36,6 +36,13 @@ const commonConfig: webpack.Configuration = {
         test: /\.ts$/,
         loader: 'ts-loader',
       },
+      {
+        test: /\.elm$/,
+        exclude: [/elm-stuff/, /node_modules/],
+        use: {
+          loader: 'elm-webpack-loader',
+        },
+      },
     ],
   },
   plugins: [
@@ -43,11 +50,9 @@ const commonConfig: webpack.Configuration = {
     new HtmlWebpackPlugin({
       inject: 'body',
       minify: true,
+      title: 'HAYATO SHIBAHARA',
     }),
   ],
-  devServer: {
-    open: true,
-  },
 };
 
 const config = (env, argv) => {
