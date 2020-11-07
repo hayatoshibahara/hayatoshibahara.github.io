@@ -21,7 +21,7 @@ const productionConfig: webpack.Configuration = {
 const commonConfig: webpack.Configuration = {
   entry: './src/app.ts',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'js/app-[contenthash].js',
   },
   resolve: {
